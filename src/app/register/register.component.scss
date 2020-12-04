@@ -1,0 +1,24 @@
+.center-content{
+    top: 50px;
+    display: flex;
+    justify-content: center;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  .buttons{
+      width:100%;
+  }
+  .signUpField{
+      display: flex;
+      flex-direction: row;
+  }
+  .title{
+      text-align: center;
+  }

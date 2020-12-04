@@ -1,0 +1,79 @@
+<!-- <mat-toolbar color="primary" class="mat-elevation-z20">
+        <div>
+            <span><mat-icon>eco</mat-icon>ProjectTitle</span>
+        </div>
+        
+
+        <div class="spacer"></div>
+
+
+        <mat-toolbar-row *ngIf="!deviceXs">
+            <div>
+                <a mat-button routerLink="home">Home</a>
+                <a mat-button routerLink="service">Services</a>
+                <a mat-button routerLink="about" routerLinkActive="router-link-active" >About Us</a>
+                <a mat-raised-button color="accent" routerLink="register">Sign Up</a>
+            </div>
+                <button mat-icon-button>
+                    <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
+                    <span *ngIf="deviceXs">Menu</span>
+                </button>
+        </mat-toolbar-row>
+
+    <mat-toolbar-row *ngIf="deviceXs">
+        <a mat-button routerLink="home">Home</a>
+        <a mat-button routerLink="service">Services</a>
+        <a mat-button routerLink="about" routerLinkActive="router-link-active" >About Us</a>
+        <a mat-raised-button color="accent" routerLink="register">Sign Up</a>
+    </mat-toolbar-row>
+
+</mat-toolbar> -->
+<mat-toolbar color="primary" class="mat-elevation-z20">
+    <span><mat-icon>eco</mat-icon>ProjectTitle</span>
+
+    <div class="spacer">
+
+    </div>
+    <div *ngIf="!deviceXs" id="myLinks"> <!--(false)  result.mqAlias=="xs"? true :false;-->
+        <a mat-button routerLink="home">Home</a>
+        <a mat-button routerLink="service">Services</a>
+        <a mat-button routerLink="about" routerLinkActive="router-link-active" >About Us</a>
+        <a mat-button  routerLink="register">Sign Up</a>
+    </div>
+
+    <div *ngIf="deviceXs">
+        <div class="dropdown">
+            <mat-icon *ngIf="deviceXs">more_vert</mat-icon>
+            <span *ngIf="deviceXs">Menu</span>
+            <div class="dropdown-content">
+              <a href="#">Home</a>
+              <a href="#">Services</a>
+              <a href="#">About Us</a>
+              <a routerLink="register">Sign Up</a>
+            </div>
+          </div>
+          <!-- <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item>
+              <mat-icon>dialpad</mat-icon>
+              <span>Home</span>
+            </button>
+            <button mat-menu-item disabled>
+              <mat-icon>voicemail</mat-icon>
+              <span>Services</span>
+            </button>
+            <button mat-menu-item>
+              <mat-icon>notifications_off</mat-icon>
+              <span>About Us</span>
+            </button>
+          </mat-menu> -->
+
+    </div>
+
+
+
+
+
+</mat-toolbar>
